@@ -1,3 +1,4 @@
+local utils = require "astronvim.utils"
 return {
   -- customize alpha options
   {
@@ -5,21 +6,63 @@ return {
     opts = function(_, opts)
       -- customize the dashboard header
       opts.section.header.val = {
-        " █████  ███████ ████████ ██████   ██████",
+        "█████ █████ ████████ ██████ ██████",
         "██   ██ ██         ██    ██   ██ ██    ██",
-        "███████ ███████    ██    ██████  ██    ██",
+        "███████ █████    ██    ██████ ██    ██",
         "██   ██      ██    ██    ██   ██ ██    ██",
-        "██   ██ ███████    ██    ██   ██  ██████",
-        " ",
-        "    ███    ██ ██    ██ ██ ███    ███",
-        "    ████   ██ ██    ██ ██ ████  ████",
-        "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-        "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-        "    ██   ████   ████   ██ ██      ██",
+        "██   ██ █████    ██    ██   ██ ██████",
       }
       return opts
     end,
   },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    opts = function(_, opts)
+      -- Ensure that opts.ensure_installed exists and is a table or string "all".
+      if opts.ensure_installed ~= "all" then
+        opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, "astro")
+      end
+    end,
+  },
+  {
+    "williamboman/mason-lspconfig.nvim",
+    opts = function(_, opts) opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, "astro") end,
+  },
+  { "nvim-telescope/telescope-fzf-native.nvim", enabled = false },
+  { "lukas-reineke/indent-blankline.nvim", enabled = false },
+  {
+    "nvim-telescope/telescope.nvim",
+    dependencies = { "folke/trouble.nvim" },
+    opts = function(_, opts)
+      local trouble = require "trouble.providers.telescope"
+      return require("astronvim.utils").extend_tbl(opts, {
+        defaults = {
+          mappings = {
+            i = { ["<c-t>"] = trouble.open_with_trouble },
+            n = { ["<c-t>"] = trouble.open_with_trouble },
+          },
+        },
+      })
+    end,
+  },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = {
+      filesystem = {
+        filtered_items = {
+          hide_dotfiles = false,
+          hide_by_name = {
+            "node_modules",
+          },
+          never_show = {
+            ".DS_Store",
+            "thumbs.db",
+          },
+        },
+      },
+    },
+  },
+  --  ▇ █ ▉ ▊ ▒ ▓ ░ █ ▉ █
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
   --
