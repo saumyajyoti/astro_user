@@ -9,7 +9,7 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
-   { "rcarriga/nvim-notify", init = false, config = true },
+  { "rcarriga/nvim-notify", init = false, config = true },
   {
     "nvim-treesitter/nvim-treesitter",
     opts = function(_, opts)
