@@ -1,3 +1,20 @@
+-- local util = require "nvim-lspconfig.lua.lspconfig.util"
+local root_files = {
+  ".clangd",
+  ".clang-tidy",
+  ".clang-format",
+  "compile_commands.json",
+  "compile_flags.txt",
+  ".git",
+}
+local default_capabilities = {
+  textDocument = {
+    completion = {
+      editsNearCursor = true,
+    },
+  },
+  offsetEncoding = { "utf-8" },
+}
 return {
   -- Configure AstroNvim updates
   updater = {
@@ -35,7 +52,6 @@ return {
       tab = { "", " " },
       breadcrumbs = "  ",
       path = "  ",
-
     },
   },
   lsp = {
@@ -46,7 +62,7 @@ return {
         enabled = true,     -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
           -- "go",
-          "lua"
+          "lua",
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
           -- "python",
@@ -65,7 +81,26 @@ return {
     servers = {
       -- "pyright"
     },
+    setup_handlers = {
+      -- add custom handler
+      clangd = function(_, opts) require("clangd_extensions").setup { server = opts } end,
+    },
+    config = {
+      clangd = {
+        capabilities = default_capabilities,
+        -- root_dir = function(fname) return "compile_commands.json" end,
+      },
+    },
   },
+  -- plugins = {
+  --   "p00f/clangd_extensions.nvim", -- install lsp plugin
+  --   {
+  --     "williamboman/mason-lspconfig.nvim",
+  --     opts = {
+  --       ensure_installed = { "clangd" }, -- automatically install lsp
+  --     },
+  --   },
+  -- },
 
   -- Configure require("lazy").setup() options
   lazy = {

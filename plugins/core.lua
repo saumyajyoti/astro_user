@@ -1,4 +1,4 @@
-local utils = require "astronvim.utils"
+-- local utils = require "astronvim.utils"
 return {
   -- customize alpha options
   {
@@ -15,21 +15,23 @@ return {
       return opts
     end,
   },
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = function(_, opts)
-      -- Ensure that opts.ensure_installed exists and is a table or string "all".
-      if opts.ensure_installed ~= "all" then
-        opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, "astro")
-      end
-    end,
-  },
-  {
-    "williamboman/mason-lspconfig.nvim",
-    opts = function(_, opts) opts.ensure_installed = utils.list_insert_unique(opts.ensure_installed, "astro") end,
-  },
+
   { "nvim-telescope/telescope-fzf-native.nvim", enabled = false },
-  { "lukas-reineke/indent-blankline.nvim", enabled = false },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    -- enabled = false,
+    opts = {
+      space_char_blankline = " ",
+      -- char_highlight_list = {
+      --   "IndentBlanklineIndent1",
+      --   "IndentBlanklineIndent2",
+      --   "IndentBlanklineIndent3",
+      --   "IndentBlanklineIndent4",
+      --   "IndentBlanklineIndent5",
+      --   "IndentBlanklineIndent6",
+      -- },
+    },
+  },
   {
     "nvim-telescope/telescope.nvim",
     dependencies = { "folke/trouble.nvim" },
@@ -44,6 +46,35 @@ return {
         },
       })
     end,
+    -- highlights = {
+    --   -- set highlights for all themes
+    --   -- use a function override to let us use lua to retrieve colors from highlight group
+    --   -- there is no default table so we don't need to put a parameter for this function
+    --   init = function()
+    --     local get_hlgroup = require("astronvim.utils").get_hlgroup
+    --     -- get highlights from highlight groups
+    --     local normal = get_hlgroup "Normal"
+    --     local fg, bg = normal.fg, normal.bg
+    --     local bg_alt = get_hlgroup("Visual").bg
+    --     local green = get_hlgroup("String").fg
+    --     local red = get_hlgroup("Error").fg
+    --     -- return a table of highlights for telescope based on colors gotten from highlight groups
+    --     return {
+    --       TelescopeBorder = { fg = bg_alt, bg = bg },
+    --       TelescopeNormal = { bg = bg },
+    --       TelescopePreviewBorder = { fg = bg, bg = bg },
+    --       TelescopePreviewNormal = { bg = bg },
+    --       TelescopePreviewTitle = { fg = bg, bg = green },
+    --       TelescopePromptBorder = { fg = bg_alt, bg = bg_alt },
+    --       TelescopePromptNormal = { fg = fg, bg = bg_alt },
+    --       TelescopePromptPrefix = { fg = red, bg = bg_alt },
+    --       TelescopePromptTitle = { fg = bg, bg = red },
+    --       TelescopeResultsBorder = { fg = bg, bg = bg },
+    --       TelescopeResultsNormal = { bg = bg },
+    --       TelescopeResultsTitle = { fg = bg, bg = bg },
+    --     }
+    --   end,
+    -- },
   },
   {
     "nvim-neo-tree/neo-tree.nvim",
@@ -62,6 +93,18 @@ return {
       },
     },
   },
+  -- {
+  --   "neovim/nvim-lspconfig",
+  --   opts = {
+  --     -- diagnostics = { virtual_text = { prefix = "icons" } },
+  --     setup = {
+  --       clangd = function(_, opts)
+  --         opts.root_dir.root_pattern = { "compile_commands.json" }
+  --         -- opts.capabilities.offsetEncoding = { "utf-16" }
+  --       end,
+  --     },
+  --   },
+  -- },
   --  ▇ █ ▉ ▊ ▒ ▓ ░ █ ▉ █
   -- You can disable default plugins as follows:
   -- { "max397574/better-escape.nvim", enabled = false },
