@@ -16,7 +16,12 @@ return {
     end,
   },
 
-  { "nvim-telescope/telescope-fzf-native.nvim", enabled = false },
+  {
+    "nvim-telescope/telescope-fzf-native.nvim",
+    enabled = false,
+    build =
+    "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+  },
   {
     "lukas-reineke/indent-blankline.nvim",
     -- enabled = false,
@@ -34,17 +39,53 @@ return {
   },
   {
     "nvim-telescope/telescope.nvim",
-    dependencies = { "folke/trouble.nvim" },
+    dependencies = {
+      "folke/trouble.nvim",
+      "nvim-lua/plenary.nvim",
+      "debugloop/telescope-undo.nvim",
+      "nvim-telescope/telescope-file-browser.nvim",
+    },
     opts = function(_, opts)
       local trouble = require "trouble.providers.telescope"
+      local fb_actions = require("telescope").extensions.file_browser.actions
       return require("astronvim.utils").extend_tbl(opts, {
         defaults = {
+          prompt_prefix = "   ",
           mappings = {
             i = { ["<c-t>"] = trouble.open_with_trouble },
             n = { ["<c-t>"] = trouble.open_with_trouble },
           },
         },
+        extensions = {
+          undo = {
+            -- side_by_side = true,
+            -- layout_strategy = "vertical",
+            -- layout_config = {
+            --   preview_height = 0.8,
+            -- },
+          },
+          file_browser = {
+            mappings = {
+              i = {
+                ["<C-z>"] = fb_actions.toggle_hidden,
+              },
+              n = {
+                z = fb_actions.toggle_hidden,
+              },
+            },
+          },
+        },
       })
+    end,
+    config = function(...)
+      require "plugins.configs.telescope" (...)
+      local telescope = require "telescope"
+      -- telescope.load_extension "fzy_native"
+      -- telescope.load_extension "live_grep_args"
+      -- telescope.load_extension "bibtex"
+      telescope.load_extension "file_browser"
+      telescope.load_extension "undo"
+      -- telescope.load_extension "projects"
     end,
     -- highlights = {
     --   -- set highlights for all themes

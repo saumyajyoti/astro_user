@@ -105,6 +105,9 @@ return {
   -- Configure require("lazy").setup() options
   lazy = {
     defaults = { lazy = true },
+    ui = {
+      border = "single",
+    },
     performance = {
       rtp = {
         -- customize default disabled vim plugins
@@ -117,6 +120,17 @@ return {
   -- augroups/autocommands and custom filetypes also this just pure lua so
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
+    --   vim.cmd [[
+    -- let &shellredir = '2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode'
+    -- let &shellpipe = '2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode'
+    -- set shellquote= shellxquote=
+    -- ]]
+    vim.keymap.set("c", "<S-CR>", function()
+      require("noice").redirect(function() vim.fn.getcmdline() end)
+    end, { desc = "Redirect Cmdline" })
+    --
+    vim.api.nvim_create_user_command("Insp", function() require("noice").redirect "Inspect!" end, { nargs = 0 })
+
     -- Set up custom filetypes
     -- vim.filetype.add {
     --   extension = {

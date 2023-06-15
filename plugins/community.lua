@@ -16,7 +16,7 @@ return {
   -- { import = "astrocommunity.syntax.vim-cool" },
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
-  { import = "astrocommunity.git.git-blame-nvim" },
+  -- { import = "astrocommunity.git.git-blame-nvim" },
   -- { import = "astrocommunity.motion.vim-matchup" },
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.motion.mini-move" },

@@ -8,6 +8,9 @@ return {
     signcolumn = "auto",   -- sets vim.opt.signcolumn to auto
     wrap = false,          -- sets vim.opt.wrap
     autochdir = true,
+    -- shell = "pwsh.exe -NoLogo -NoProfile -NoExit -File U:/POSH/profile.ps1",
+    -- shellcmdflag =
+    -- "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;",
   },
   g = {
     mapleader = " ",                 -- sets vim.g.mapleader
@@ -17,6 +20,9 @@ return {
     diagnostics_mode = 3,            -- set the visibility of diagnostics in the UI (0=off, 1=only show in status line, 2=virtual text off, 3=all on)
     icons_enabled = true,            -- disable icons in the UI (disable if no nerd font is available, requires :PackerSync after changing)
     ui_notifications_enabled = true, -- disable notifications when toggling UI elements
+    -- loaded_matchit = 1,              -- not needed when matchup in installed
+    -- gitblame_highlight_group = "comments",
+    -- gitblame_message_template = " 󰊢  <summary> • <date> • <author>",
   },
 }
 -- If you need more control, you can use the function()...end notation
