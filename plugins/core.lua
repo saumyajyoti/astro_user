@@ -19,8 +19,7 @@ return {
   {
     "nvim-telescope/telescope-fzf-native.nvim",
     enabled = false,
-    build =
-    "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+    build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
   },
   {
     "lukas-reineke/indent-blankline.nvim",
@@ -78,7 +77,7 @@ return {
       })
     end,
     config = function(...)
-      require "plugins.configs.telescope" (...)
+      require "plugins.configs.telescope"(...)
       local telescope = require "telescope"
       -- telescope.load_extension "fzy_native"
       -- telescope.load_extension "live_grep_args"
