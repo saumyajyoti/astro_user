@@ -144,5 +144,6 @@ return {
         },
       },
     }
+    return opts
   end,
 }

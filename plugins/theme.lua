@@ -82,62 +82,97 @@ return {
       -- Mocha - Labels	Hex
       --
       -- Rosewater	#f5e0dc
-      -- Flamingo	#f2cdcd
-      -- Pink	#f5c2e7
-      -- Mauve	#cba6f7
-      -- Red	#f38ba8
-      -- Maroon	#eba0ac
-      -- Peach	#fab387
-      -- Yellow	#f9e2af
-      -- Green	#a6e3a1
-      -- Teal	#94e2d5
-      -- Sky	#89dceb
-      -- Sapphire	#74c7ec
-      -- Blue	#89b4fa
-      -- Lavender	#b4befe
-      -- Text	#cdd6f4
-      -- Subtext1	#bac2de
-      -- Subtext0	#a6adc8
-      -- Overlay2	#9399b2
-      -- Overlay1	#7f849c
-      -- Overlay0	#6c7086
-      -- Surface2	#585b70
-      -- Surface1	#45475a
-      -- Surface0	#313244
-      -- Base	#1e1e2e
-      -- Mantle	#181825
-      -- Crust	#11111b
+      -- Flamingo 	#f2cdcd
+      -- Pink     	#f5c2e7
+      -- Mauve    	#cba6f7
+      -- Red	      #f38ba8
+      -- Maroon	    #eba0ac
+      -- Peach	    #fab387
+      -- Yellow   	#f9e2af
+      -- Green    	#a6e3a1
+      -- Teal     	#94e2d5
+      -- Sky      	#89dceb
+      -- Sapphire 	#74c7ec
+      -- Blue	      #89b4fa
+      -- Lavender  	#b4befe
+      -- Text     	#cdd6f4
+      -- Subtext1 	#bac2de
+      -- Subtext0 	#a6adc8
+      -- Overlay2	  #9399b2
+      -- Overlay1	  #7f849c
+      -- Overlay0	  #6c7086
+      -- Surface2	  #585b70
+      -- Surface1	  #45475a
+      -- Surface0	  #313244
+      -- Base   	  #1e1e2e
+      -- Mantle 	  #181825
+      -- Crust  	  #11111b
 
+      -- gruvbox mix material
+      --   \ 'bg_dim':           ['#1b1b1b',   '233'],
+      --   \ 'bg0':              ['#282828',   '235'],
+      --   \ 'bg1':              ['#32302f',   '236'],
+      --   \ 'bg2':              ['#32302f',   '236'],
+      --   \ 'bg3':              ['#45403d',   '237'],
+      --   \ 'bg4':              ['#45403d',   '237'],
+      --   \ 'bg5':              ['#5a524c',   '239'],
+      --   \ 'bg_statusline1':   ['#32302f',   '236'],
+      --   \ 'bg_statusline2':   ['#3a3735',   '236'],
+      --   \ 'bg_statusline3':   ['#504945',   '240'],
+      --   \ 'bg_diff_green':    ['#34381b',   '22'],
+      --   \ 'bg_visual_green':  ['#3b4439',   '22'],
+      --   \ 'bg_diff_red':      ['#402120',   '52'],
+      --   \ 'bg_visual_red':    ['#4c3432',   '52'],
+      --   \ 'bg_diff_blue':     ['#0e363e',   '17'],
+      --   \ 'bg_visual_blue':   ['#374141',   '17'],
+      --   \ 'bg_visual_yellow': ['#4f422e',   '94'],
+      --   \ 'bg_current_word':  ['#3c3836',   '237']
+      --
+      --   \ 'fg0':              ['#e2cca9',   '223'],
+      --   \ 'fg1':              ['#e2cca9',   '223'],
+      --   \ 'red':              ['#f2594b',   '167'],
+      --   \ 'orange':           ['#f28534',   '208'],
+      --   \ 'yellow':           ['#e9b143',   '214'],
+      --   \ 'green':            ['#b0b846',   '142'],
+      --   \ 'aqua':             ['#8bba7f',   '108'],
+      --   \ 'blue':             ['#80aa9e',   '109'],
+      --   \ 'purple':           ['#d3869b',   '175'],
+      --   \ 'bg_red':           ['#db4740',   '167'],
+      --   \ 'grey0':            ['#7c6f64',   '243'],
+      --   \ 'grey1':            ['#928374',   '245'],
+      --   \ 'grey2':            ['#a89984',   '246'],
+      --
       color_overrides = {
         mocha = {
+          -- Gruvbox_mix-medium from https://github.com/sainnhe/gruvbox-material
           -- gruvbox -- alternate (https://github.com/thanhvule0310) -- Catppuccin
-          --
-          rosewater = "#ffa1a7", -- "#EA6962", -- #F5E0DC
-          flamingo = colors_gruvbox.bright_red, -- "#F38BA8", -- #F2CDCD
-          -- pink =                                  "#D3869B", -- #F5C2E7
-          mauve = colors_gruvbox.neutral_purple, -- "#D3869B", -- #CBA6F7
-          red = "#EA6962", -- #F38BA8
-          -- maroon = "#EA6962",                                -- #EBA0AC
-          peach = colors_gruvbox.faded_yellow, -- "#c68e6b", -- #FAB387
-          yellow = colors_gruvbox.bright_yellow, -- "#D8A657", -- #F9E2AF
-          green = "#A9B665", -- #A6E3A1
-          teal = "#89B482", -- #94E2D5
-          sky = colors_gruvbox.bright_aqua, -- "#89B482", -- #89DCEB
-          sapphire = colors_gruvbox.neutral_blue, -- "#89B482", -- #74C7EC
-          blue = colors_gruvbox.bright_blue, -- "#7DAEA3",                   -- #87B0F9
-          -- lavender = "#7DAEA3", -- #B4BEFE
-          text = colors_gruvbox.light1, -- "#D4BE98", -- #C6D0F5
-          subtext1 = colors_gruvbox.light0_soft, -- "#BDAE8B", -- #B3BCDF
-          subtext0 = colors_gruvbox.light2, -- "#A69372", -- #A1A8C9
-          overlay2 = colors_gruvbox.light3, -- "#8C7A58", -- #8E95B3
-          overlay1 = colors_gruvbox.light4, -- "#735F3F", -- #7B819D
-          overlay0 = colors_gruvbox.gray, -- "#806234", -- #696D86
-          surface2 = colors_gruvbox.dark3, -- "#6E7477", --#4B4F51", -- #565970
-          surface1 = colors_gruvbox.dark1, -- "#2A2D2E", -- #43465A
-          surface0 = colors_gruvbox.dark0_soft, --  "#232728", -- #313244
-          base = colors_gruvbox.dark0, -- "#1D2021", -- #1E1E2E
-          mantle = colors_gruvbox.dark0_hard, -- "#191C1D",          -- #181825
-          crust = "#151819", -- #11111B
+          --                                         current    alt     catp    gruv_mat
+          rosewater = "#ffc6be", -- #ffc6be  #EA6962  #F5E0DC
+          flamingo = "#fb4934", -- #fb4934  #F38BA8  #F2CDCD
+          pink = "#F8BBD0", --          #D3869B  #F5C2E7
+          mauve = "#d3869b", --          #D3869B" #CBA6F7
+          red = "#f2594b", --          #EA6962  #F38BA8
+          maroon = "#fe8019", --          #EA6962  #EBA0AC
+          peach = "#b57614", -- #b57614  #c68e6b  #FAB387
+          yellow = "#e9b143", -- #e9b143  #D8A657  #F9E2AF
+          green = "#b0b846", --                   #A6E3A1
+          teal = "#89B482", --                   #94E2D5
+          sky = "#83a598", --          #89B482  #89DCEB
+          sapphire = "#427b58", --          #89B482  #74C7EC
+          blue = "#458588", --          #7DAEA3  #87B0F9
+          lavender = "#b16286", --                   #B4BEFE
+          text = colors_gruvbox.light1, -- #ebdbb2  #D4BE98  #C6D0F5
+          subtext1 = colors_gruvbox.light0_soft, -- #f2e5bc         #BDAE8B  #B3BCDF
+          subtext0 = colors_gruvbox.light2, -- #d5c4a1         #A69372  #A1A8C9
+          overlay2 = colors_gruvbox.light3, -- #bdae93  #8C7A58  #8E95B3
+          overlay1 = colors_gruvbox.light4, -- #a89984  #735F3F  #7B819D
+          overlay0 = colors_gruvbox.gray, -- #928374  #806234  #696D86
+          surface2 = colors_gruvbox.dark3, -- "#6E7477"#4B4F51",  #565970
+          surface1 = colors_gruvbox.dark1, -- "#2A2D2E", --           #43465A
+          surface0 = colors_gruvbox.dark0_soft, --  "#232728", --     #313244
+          base = "#282828", -- "#1D2021", --               #1E1E2E
+          mantle = "#1d2021", -- "#191C1D",           #181825
+          crust = "#1b1b1b", --                                       #11111B
         },
       },
       custom_highlights = function(colors)
@@ -167,21 +202,22 @@ return {
           -- Blamer = { fg = colors.overlay1, bg = colors.base },
           -- NvimTreeIndentMarker = { link = "IndentBlanklineChar" },
           -- NvimTreeExecFile = { fg = colors.text },
-          Type = { fg = colors.green },
-          Structure = { fg = colors.green },
+          Type = { fg = colors.sapphire },
+          Structure = { fg = colors.teal },
           Comment = { fg = colors.surface2 },
           cTypedef = { fg = colors.pink, style = { "italic" } },
           cDefine = { fg = colors.pink, style = { "italic" } },
           cStructure = { fg = colors.yellow },
           StorageClass = { fg = colors.pink, style = { "italic" } },
           cStorageclass = { fg = colors.pink, style = { "italic" } },
-          PreProc = { fg = colors.teal, style = { "italic" } },
-          Keyword = { fg = colors.pink },
+          PreProc = { fg = colors.maroon, style = { "italic" } },
+          Keyword = { fg = colors.flamingo },
           Conditional = { fg = colors.red },
           Repeat = { fg = colors.red },
-          ["@keyword.return"] = { fg = colors.red, style = { "italic" } },
+          ["@keyword.return"] = { fg = colors.flamingo, style = { "italic" } },
           ["@parameter"] = { style = {} },
-          WinBar = { fg = colors.overlay1, bg = colors.mantle },
+          ["@property"] = { fg = colors.yellow },
+          WinBar = { fg = colors.overlay2, bg = colors.mantle },
           -- TabLineSel = { bg = colors.pink },
           -- CmpBorder = { fg = colors.surface2 },
           --  Pmenu = { bg = C.none },
