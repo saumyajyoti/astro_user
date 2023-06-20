@@ -20,8 +20,18 @@ return {
   -- { import = "astrocommunity.motion.vim-matchup" },
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.motion.mini-move" },
-  { import = "astrocommunity.pack.markdown" },
 
   { import = "astrocommunity.editing-support.nvim-ts-rainbow2" },
   { import = "astrocommunity.indent.indent-blankline-nvim" },
+  { import = "astrocommunity.pack.json" },
+  { import = "astrocommunity.pack.markdown" },
+  { import = "astrocommunity.pack.toml" },
+  { import = "astrocommunity.pack.yaml" },
+  -- { import = "astrocommunity.editing-support.auto-save-nvim" },
+  { import = "astrocommunity.syntax.vim-cool" },
+  -- { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
+  { import = "astrocommunity.color.headlines-nvim" },
+  { import = "astrocommunity.color.vim-highlighter" },
+  { import = "astrocommunity.editing-support.text-case-nvim" },
+  -- { import = "astrocommunity.syntax.hlargs-nvim" }
 }

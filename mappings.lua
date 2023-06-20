@@ -21,23 +21,28 @@ return {
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
     ["<C-i>"] = {
-      function() require("noice").redirect "Inspect!<cword>" end,
-      desc = "Get Syntax under cursor",
+      ":lua require('noice').redirect('Inspect!')<cr>",
+      desc = "Get Syn Stack under cursor",
     },
 
     -- quick save
-    -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<C-s>"] = { ":w<cr>", desc = "Save File" },       -- change description but the same command
+
+    ["<C-z>"] = { ":undo<cr>", desc = "Undo Changes" }, -- alt u
+    ["<C-y>"] = { ":redo<cr>", desc = "Redo Changes" }, -- alt C-R
+
   },
   t = {
     -- setting a mapping to false will disable it
     -- ["<esc>"] = false,
   },
-  -- c = {
-  --   ["<S-Enter>"] = {
-  --     function()
-  --       require("noice").redirect(function() vim.fn.getcmdline() end)
-  --     end,
-  --     desc = "Redirect Cmdline",
-  --   },
-  -- },
+  i = {
+    ["<C-s>"] = { "<esc>:w<cr>i", desc = "Save File" },
+    ["<C-z>"] = { "<esc>:undo<cr>i", desc = "Undo Changes" }, -- alt u
+    ["<C-y>"] = { "<esc>:redo<cr>i", desc = "Redo Changes" }, -- alt C-R
+    ["jj"] = { "<esc>", desc = "Exit Insert Mode" },
+  },
+  c = {
+    ["<S-Enter>"] = { "<Home>require('noice').redirect('<End>')<cr>", desc = "Redirect Cmdline" },
+  },
 }

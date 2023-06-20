@@ -1,4 +1,5 @@
 local utils = require "astronvim.utils"
+-- local icons = require("nvim-nonicons")
 return {
   -- {
   --   "akinsho/bufferline.nvim",
@@ -19,6 +20,46 @@ return {
   --     -- opts.statusline = nil
   --   end,
   -- },
+  -- {
+  --   "yamatsum/nvim-nonicons",
+  --   dependencies = { "nvim-tree/nvim-web-devicons" },
+  --   config = true,
+  --   lazy = false,
+  -- },
+  {
+    "nvim-neo-tree/neo-tree.nvim",
+    opts = function(_, opts)
+      opts.filesystem = {
+        filtered_items = {
+          hide_dotfiles = false,
+          hide_gitignored = false,
+          hide_by_name = {
+            "node_modules",
+          },
+          never_show = {
+            ".DS_Store",
+            "thumbs.db",
+          },
+        },
+      }
+    end,
+  },
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    -- enabled = false,
+    opts = {
+      space_char_blankline = " ",
+      -- char_highlight_list = {
+      --   "IndentBlanklineIndent1",
+      --   "IndentBlanklineIndent2",
+      --   "IndentBlanklineIndent3",
+      --   "IndentBlanklineIndent4",
+      --   "IndentBlanklineIndent5",
+      --   "IndentBlanklineIndent6",
+      -- },
+    },
+  },
+
   -- noice
   {
     "rcarriga/nvim-notify",
@@ -32,8 +73,11 @@ return {
       },
     },
     opts = function(_, opts)
+      -- local nonicons_extention = require("nvim-nonicons.extentions.nvim-notify")
+
       opts.stages = "fade" -- fade_in_slide_out",
       opts.timeout = 3000
+      -- opts.icons = nonicons_extention.icons
     end,
   },
   {
@@ -55,11 +99,11 @@ return {
         signature = { enabled = false },
       },
       routes = {
-        { filter = { event = "msg_show", find = "%d+L,%s%d+B" }, opts = { skip = true } }, -- skip save notifications
-        { filter = { event = "msg_show", find = "^%d+ more lines$" }, opts = { skip = true } }, -- skip paste notifications
+        { filter = { event = "msg_show", find = "%d+L,%s%d+B" },       opts = { skip = true } }, -- skip save notifications
+        { filter = { event = "msg_show", find = "^%d+ more lines$" },  opts = { skip = true } }, -- skip paste notifications
         { filter = { event = "msg_show", find = "^%d+ fewer lines$" }, opts = { skip = true } }, -- skip delete notifications
         { filter = { event = "msg_show", find = "^%d+ lines yanked" }, opts = { skip = true } }, -- skip yank notifications
-        { filter = { event = "msg_show", find = "deprecated" }, opts = { skip = true } }, -- skip nvim deperecated notifications
+        { filter = { event = "msg_show", find = "deprecated" },        opts = { skip = true } }, -- skip nvim deperecated notifications
       },
       presets = {
         long_message_to_split = true,
