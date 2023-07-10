@@ -44,21 +44,21 @@ return {
       }
     end,
   },
-  {
-    "lukas-reineke/indent-blankline.nvim",
-    -- enabled = false,
-    opts = {
-      space_char_blankline = " ",
-      -- char_highlight_list = {
-      --   "IndentBlanklineIndent1",
-      --   "IndentBlanklineIndent2",
-      --   "IndentBlanklineIndent3",
-      --   "IndentBlanklineIndent4",
-      --   "IndentBlanklineIndent5",
-      --   "IndentBlanklineIndent6",
-      -- },
-    },
-  },
+  -- {
+  --   "lukas-reineke/indent-blankline.nvim",
+  --   -- enabled = false,
+  --   opts = {
+  --     space_char_blankline = " ",
+  --     -- char_highlight_list = {
+  --     --   "IndentBlanklineIndent1",
+  --     --   "IndentBlanklineIndent2",
+  --     --   "IndentBlanklineIndent3",
+  --     --   "IndentBlanklineIndent4",
+  --     --   "IndentBlanklineIndent5",
+  --     --   "IndentBlanklineIndent6",
+  --     -- },
+  --   },
+  -- },
 
   -- noice
   {
@@ -99,11 +99,11 @@ return {
         signature = { enabled = false },
       },
       routes = {
-        { filter = { event = "msg_show", find = "%d+L,%s%d+B" },       opts = { skip = true } }, -- skip save notifications
-        { filter = { event = "msg_show", find = "^%d+ more lines$" },  opts = { skip = true } }, -- skip paste notifications
+        { filter = { event = "msg_show", find = "%d+L,%s%d+B" }, opts = { skip = true } }, -- skip save notifications
+        { filter = { event = "msg_show", find = "^%d+ more lines$" }, opts = { skip = true } }, -- skip paste notifications
         { filter = { event = "msg_show", find = "^%d+ fewer lines$" }, opts = { skip = true } }, -- skip delete notifications
         { filter = { event = "msg_show", find = "^%d+ lines yanked" }, opts = { skip = true } }, -- skip yank notifications
-        { filter = { event = "msg_show", find = "deprecated" },        opts = { skip = true } }, -- skip nvim deperecated notifications
+        { filter = { event = "msg_show", find = "deprecated" }, opts = { skip = true } }, -- skip nvim deperecated notifications
       },
       presets = {
         long_message_to_split = true,
@@ -115,11 +115,11 @@ return {
     },
     init = function() vim.g.lsp_handlers_enabled = false end,
   },
-  {
-    "nvim-zh/colorful-winsep.nvim",
-    config = true,
-    event = { "WinNew" },
-  },
+  -- {
+  --   "nvim-zh/colorful-winsep.nvim",
+  --   config = true,
+  --   event = { "WinNew" },
+  -- },
   -- {
   --   "yorickpeterse/nvim-window",
   --   config = true,

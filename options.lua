@@ -6,9 +6,13 @@ return {
     number = true,         -- sets vim.opt.number
     spell = false,         -- sets vim.opt.spell
     signcolumn = "auto",   -- sets vim.opt.signcolumn to auto
-    wrap = false,          -- sets vim.opt.wrap
+    wrap = true,           -- sets vim.opt.wrap
     autochdir = true,
-    -- shell = "pwsh.exe -NoLogo -NoProfile -NoExit -File U:/POSH/profile.ps1",
+    --     shell=powershell,
+    shellcmdflag = "-command",
+    shellquote = '"',
+    shellxquote = "",
+    shell = "pwsh.exe -NoLogo -NoProfile -NoExit -File U:/POSH/profile.ps1",
     -- shellcmdflag =
     -- "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;",
   },

@@ -40,7 +40,7 @@ return {
     ["<C-s>"] = { "<esc>:w<cr>i", desc = "Save File" },
     ["<C-z>"] = { "<esc>:undo<cr>i", desc = "Undo Changes" }, -- alt u
     ["<C-y>"] = { "<esc>:redo<cr>i", desc = "Redo Changes" }, -- alt C-R
-    ["jj"] = { "<esc>", desc = "Exit Insert Mode" },
+    -- ["jj"] = { "<esc>", desc = "Exit Insert Mode" },
   },
   c = {
     ["<S-Enter>"] = { "<Home>require('noice').redirect('<End>')<cr>", desc = "Redirect Cmdline" },
