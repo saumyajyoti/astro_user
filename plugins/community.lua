@@ -1,4 +1,4 @@
-return {
+local M = {
   -- Add the community repository of plugin specifications
   "AstroNvim/astrocommunity",
   -- example of imporing a plugin, comment out to use it or add your own
@@ -16,13 +16,13 @@ return {
   -- { import = "astrocommunity.syntax.vim-cool" },
   { import = "astrocommunity.markdown-and-latex.glow-nvim" },
   { import = "astrocommunity.diagnostics.trouble-nvim" },
-  -- { import = "astrocommunity.git.git-blame-nvim" },
-  -- { import = "astrocommunity.motion.vim-matchup" },
+  { import = "astrocommunity.git.git-blame-nvim" },
+  { import = "astrocommunity.motion.vim-matchup" },
   { import = "astrocommunity.motion.leap-nvim" },
-  { import = "astrocommunity.motion.mini-move" },
+  -- { import = "astrocommunity.motion.mini-move" },
   { import = "astrocommunity.git.neogit" },
 
-  { import = "astrocommunity.editing-support.nvim-ts-rainbow2" },
+  { import = "astrocommunity.editing-support.rainbow-delimiters-nvim" },
   { import = "astrocommunity.indent.indent-blankline-nvim" },
   { import = "astrocommunity.pack.json" },
   { import = "astrocommunity.pack.markdown" },
@@ -30,13 +30,15 @@ return {
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.ps1" },
   -- { import = "astrocommunity.editing-support.auto-save-nvim" },
-  { import = "astrocommunity.syntax.vim-cool" },
+  -- { import = "astrocommunity.syntax.vim-cool" },
   -- { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
   { import = "astrocommunity.color.headlines-nvim" },
-  { import = "astrocommunity.color.vim-highlighter" },
+  -- { import = "astrocommunity.color.vim-highlighter" },
   { import = "astrocommunity.editing-support.text-case-nvim" },
   { import = "astrocommunity.split-and-window.edgy-nvim" },
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.motion.harpoon" },
   -- { import = "astrocommunity.syntax.hlargs-nvim" }
 }
+
+return M

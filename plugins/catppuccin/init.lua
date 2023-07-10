@@ -28,7 +28,7 @@ return {
       opts.no_bold = false      -- Force no bold
       opts.no_underline = false -- Force no underline
       opts.styles = {
-        comments = { "italic" },
+        comments = { "italic", "nocombine" },
         conditionals = { "italic" },
         loops = { "italic", "nocombine" },
         functions = { "bold", "italic" },
@@ -55,6 +55,9 @@ return {
           -- SignColumn = { bg = colors.mantle },
           Pmenu = { bg = colors.mantle, fg = "" },
           PmenuSel = { bg = colors.surface0, fg = colors.subtext0 },
+          LazySpecial = { style = {} },
+          LazyProgressDone = { fg = colors.blue, style = { "nocombine" } },
+          LazyProgressTodo = { fg = colors.overlay0, style = { "nocombine" } },
           -- astro nvchad theme
           -- TelescopeBorder = { fg = bg_alt, bg = bg },
           -- TelescopeNormal = { bg = bg },

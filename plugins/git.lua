@@ -1,6 +1,7 @@
 return {
   {
     "APZelos/blamer.nvim",
+    enabled = false,
     event = "User AstroGitFile",
     init = function()
       vim.g.blamer_prefix = "  󰊢  "

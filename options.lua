@@ -8,11 +8,11 @@ return {
     signcolumn = "auto",   -- sets vim.opt.signcolumn to auto
     wrap = true,           -- sets vim.opt.wrap
     autochdir = true,
-    --     shell=powershell,
-    shellcmdflag = "-command",
-    shellquote = '"',
-    shellxquote = "",
-    shell = "pwsh.exe -NoLogo -NoProfile -NoExit -File U:/POSH/profile.ps1",
+    -- shell = "powershell",
+    -- shellcmdflag = "-command",
+    -- shellquote = '"',
+    -- shellxquote = "",
+    -- shell = "pwsh.exe -NoLogo -NoProfile -NoExit -File U:/POSH/profile.ps1",
     -- shellcmdflag =
     -- "-NoLogo -NoProfile -ExecutionPolicy RemoteSigned -Command [Console]::InputEncoding=[Console]::OutputEncoding=[System.Text.Encoding]::UTF8;",
   },
@@ -26,7 +26,7 @@ return {
     ui_notifications_enabled = true, -- disable notifications when toggling UI elements
     -- loaded_matchit = 1,              -- not needed when matchup in installed
     -- gitblame_highlight_group = "comments",
-    -- gitblame_message_template = " 󰊢  <summary> • <date> • <author>",
+    gitblame_message_template = " 󰊢  <summary> • <date> • <author>",
   },
 }
 -- If you need more control, you can use the function()...end notation
