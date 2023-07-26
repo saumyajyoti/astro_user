@@ -8,6 +8,8 @@ return {
     signcolumn = "auto",   -- sets vim.opt.signcolumn to auto
     wrap = true,           -- sets vim.opt.wrap
     autochdir = true,
+    tabstop = 4,
+    shiftwidth = 4,
     -- shell = "powershell",
     -- shellcmdflag = "-command",
     -- shellquote = '"',

@@ -24,8 +24,8 @@ return {
         shade = "dark",
         percentage = 0.15,
       }
-      opts.no_italic = false    -- Force no italic
-      opts.no_bold = false      -- Force no bold
+      opts.no_italic = false -- Force no italic
+      opts.no_bold = false -- Force no bold
       opts.no_underline = false -- Force no underline
       opts.styles = {
         comments = { "italic", "nocombine" },
@@ -35,7 +35,7 @@ return {
         keywords = { "italic", "nocombine" },
         strings = {},
         variables = { "nocombine" },
-        numbers = { "bold" },
+        numbers = {},
         booleans = { "italic" },
         properties = {},
         types = {},
@@ -58,6 +58,8 @@ return {
           LazySpecial = { style = {} },
           LazyProgressDone = { fg = colors.blue, style = { "nocombine" } },
           LazyProgressTodo = { fg = colors.overlay0, style = { "nocombine" } },
+
+          IndentBlanklineContextChar = { fg = colors.surface2 },
           -- astro nvchad theme
           -- TelescopeBorder = { fg = bg_alt, bg = bg },
           -- TelescopeNormal = { bg = bg },
@@ -71,7 +73,6 @@ return {
           -- TelescopeResultsBorder = { fg = bg, bg = bg },
           -- TelescopeResultsNormal = { bg = bg },
           -- TelescopeResultsTitle = { fg = bg, bg = bg },
-
 
           TelescopeSelection = { bg = colors.surface0 },
           TelescopePromptCounter = { fg = colors.mauve, style = {} },
@@ -117,13 +118,13 @@ return {
           MatchParen = { fg = colors.lavender, bg = colors.surface0, style = {} },
         }
       end
-      opts.highlight_overrides = {
-        all = function(colors)
-          return {
-            -- Comment = { fg = colors.flamingo },
-          }
-        end,
-      }
+      -- opts.highlight_overrides = {
+      --   all = function(colors)
+      --     return {
+      --       -- Comment = { fg = colors.flamingo },
+      --     }
+      --   end,
+      -- }
       -- custom_highlights = {},
       opts.integrations = {
         alpha = true,

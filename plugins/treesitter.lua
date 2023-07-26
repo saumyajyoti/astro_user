@@ -1,3 +1,23 @@
+-- local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+-- parser_config.powershell = {
+--   install_info = {
+--     url = "https://github.com/powershell/tree-sitter-powershell",
+--     files = { "src/scanner.c" }
+--   },
+--   filetype = "ps1",
+--   used_by = { "psm1", "psd1", "pssc", "psxml", "cdxml" }
+-- }
+
+local parser_config = require("nvim-treesitter.parsers").get_parser_configs()
+parser_config.powershell = {
+  install_info = {
+    url = "https://github.com/kiennq/tree-sitter-powershell",
+    files = { "src/parser.c" },
+  },
+  filetype = "ps1",
+  used_by = { "psm1", "psd1", "pssc", "psxml", "cdxml" },
+}
+
 return {
   "nvim-treesitter/nvim-treesitter",
   event = "User AstroFile",
@@ -58,6 +78,7 @@ return {
         "json",
         "javascript",
         "cmake",
+        -- "powershell"
       })
     end
     opts.textobjects = {

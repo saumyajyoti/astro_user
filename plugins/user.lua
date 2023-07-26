@@ -3,6 +3,7 @@ return {
   { "gbprod/yanky.nvim" },
   { "p00f/clangd_extensions.nvim" },
   { "max397574/better-escape.nvim" },
+  { "ekickx/clipboard-image.nvim" },
   -- {
   --   "yorickpeterse/nvim-window",
   --   event = "VeryLazy",
