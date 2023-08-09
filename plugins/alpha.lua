@@ -86,7 +86,7 @@ return {
       callback = function()
         local stats = require("lazy").stats()
         local ms = math.floor(stats.startuptime * 100 + 0.5) / 100
-        footer.val = { " ", " ", " ", "AstroNvim loaded " .. stats.count .. " plugins   in " .. ms .. "ms" }
+        footer.val = { " ", " ", " ", "AstroNvim loaded " .. stats.count .. " plugins   in " .. ms .. "ms" }
 
         opts.section.footer.val = { footer }
         -- { " ", " ", " ", "AstroNvim loaded " .. stats.count .. " plugins  in " .. ms .. "ms" }

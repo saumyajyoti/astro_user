@@ -9,7 +9,8 @@ return {
       local opts = {}
       local THEME_NAME = "gruvcat"
 
-      local colors_overrides = THEME_NAME ~= "catppuccin" and require("user.plugins.catppuccin." .. THEME_NAME) or {}
+      local colors_overrides = THEME_NAME ~= "catppuccin" and
+          require("user.plugins.catppuccin." .. THEME_NAME) or {}
       -- flavour = "macchiato", -- latte, frappe, macchiato, mocha
       opts.background = {
         -- :h background
@@ -24,8 +25,8 @@ return {
         shade = "dark",
         percentage = 0.15,
       }
-      opts.no_italic = false -- Force no italic
-      opts.no_bold = false -- Force no bold
+      opts.no_italic = false    -- Force no italic
+      opts.no_bold = false      -- Force no bold
       opts.no_underline = false -- Force no underline
       opts.styles = {
         comments = { "italic", "nocombine" },
@@ -93,24 +94,24 @@ return {
           -- Blamer = { fg = colors.overlay1, bg = colors.base },
           -- NvimTreeIndentMarker = { link = "IndentBlanklineChar" },
           -- NvimTreeExecFile = { fg = colors.text },
-          Function = { fg = colors.sky },
+          Function = { fg = colors.green },
           ["@function.macro"] = { fg = colors.mauve },
           Type = { fg = colors.blue },
           ["@type.builtin"] = { fg = colors.blue },
           Structure = { fg = colors.teal },
-          Comment = { fg = colors.surface2 },
+          Comment = { fg = colors.overlay1 },
           cTypedef = { fg = colors.pink, style = { "italic" } },
           cDefine = { fg = colors.pink, style = { "italic" } },
           cStructure = { fg = colors.yellow },
           StorageClass = { fg = colors.pink, style = { "italic" } },
           cStorageclass = { fg = colors.pink, style = { "italic" } },
-          PreProc = { fg = colors.maroon, style = { "italic", "nocombine" } },
-          Keyword = { fg = colors.flamingo },
-          Conditional = { fg = colors.red },
+          PreProc = { fg = colors.peach, style = { "italic", "nocombine" } },
+          Keyword = { fg = colors.maroon },
+          Conditional = { fg = colors.maroon },
           Repeat = { fg = colors.red },
           ["@keyword.return"] = { fg = colors.flamingo, style = { "italic", "nocombine" } },
-          ["@parameter"] = { fg = colors.overlay1, style = { "italic" } },
-          ["@property"] = { fg = colors.yellow },
+          ["@parameter"] = { fg = colors.subtext0, style = { "italic" } },
+          ["@property"] = { fg = colors.subtext1 },
           WinBar = { fg = colors.overlay2, bg = colors.mantle },
           -- TabLineSel = { bg = colors.pink },
           -- CmpBorder = { fg = colors.surface2 },

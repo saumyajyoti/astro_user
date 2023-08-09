@@ -26,6 +26,7 @@ local M = {
   { import = "astrocommunity.markdown-and-latex.markmap-nvim" },
   --
   { import = "astrocommunity.diagnostics.trouble-nvim" },
+  { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   --
   { import = "astrocommunity.git.git-blame-nvim" },
   { import = "astrocommunity.git.neogit" },
