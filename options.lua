@@ -28,7 +28,7 @@ return {
     ui_notifications_enabled = true, -- disable notifications when toggling UI elements
     -- loaded_matchit = 1,              -- not needed when matchup in installed
     gitblame_highlight_group = "MasonMutedBlock",
-    gitblame_message_template = "    <summary>  <author>  󱛡 <date>",
+    gitblame_message_template = "  <summary>  <author>  󱛡 <date>",
     gitblame_enabled = 0,
   },
 }

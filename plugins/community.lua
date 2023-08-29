@@ -26,10 +26,10 @@ local M = {
   { import = "astrocommunity.markdown-and-latex.markmap-nvim" },
   --
   { import = "astrocommunity.diagnostics.trouble-nvim" },
-  { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
+  -- { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   --
   { import = "astrocommunity.git.git-blame-nvim" },
-  { import = "astrocommunity.git.neogit" },
+  -- { import = "astrocommunity.git.neogit" },
 
   --
   -- indent
@@ -60,6 +60,7 @@ local M = {
   { import = "astrocommunity.editing-support.todo-comments-nvim" },
   { import = "astrocommunity.editing-support.dial-nvim" },
   { import = "astrocommunity.editing-support.comment-box-nvim" },
+  { import = "astrocommunity.editing-support.nvim-devdocs" },
   -- { import = "astrocommunity.editing-support.auto-save-nvim" },
   -- { import = "astrocommunity.editing-support.cutlass-nvim" },
   --
@@ -67,6 +68,7 @@ local M = {
   -- { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
   { import = "astrocommunity.color.headlines-nvim" },
   { import = "astrocommunity.search.sad-nvim" },
+  { import = "astrocommunity.scrolling.cinnamon-nvim",                     enabled = false },
   -- { import = "astrocommunity.color.vim-highlighter" },
   -- { import = "astrocommunity.split-and-window.edgy-nvim" },
   -- { import = "astrocommunity.syntax.hlargs-nvim" }
