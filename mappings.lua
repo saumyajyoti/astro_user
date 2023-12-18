@@ -43,6 +43,6 @@ return {
     -- ["jj"] = { "<esc>", desc = "Exit Insert Mode" },
   },
   c = {
-    ["<S-Enter>"] = { "<Home>require('noice').redirect('<End>')<cr>", desc = "Redirect Cmdline" },
+   -- ["<S-Enter>"] = { "<Home>require('noice').redirect('<End>')<cr>", desc = "Redirect Cmdline" },
   },
 }

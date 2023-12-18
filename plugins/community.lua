@@ -4,6 +4,9 @@ local M = {
   -- example of imporing a plugin, comment out to use it or add your own
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
   --
+  -- color 
+  { import = "astrocommunity.colorscheme.catppuccin" },
+
   --  Bars
   -- {import = "astrocommunity.bars-and-lines.dropbar-nvim"},
   -- { import = "astrocommunity.bars-and-lines.bufferline-nvim" },
@@ -71,7 +74,10 @@ local M = {
   { import = "astrocommunity.scrolling.cinnamon-nvim",                     enabled = false },
   -- { import = "astrocommunity.color.vim-highlighter" },
   -- { import = "astrocommunity.split-and-window.edgy-nvim" },
-  -- { import = "astrocommunity.syntax.hlargs-nvim" }
+  -- { import = "astrocommunity.syntax.hlargs-nvim" },
+
+  { import = "astrocommunity.utility.noice-nvim"},
+  {import = "astrocommunity.utility.telescope-live-grep-args-nvim"},
 }
 
 return M

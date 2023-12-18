@@ -126,9 +126,9 @@ return {
     -- let &shellpipe = '2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode'
     -- set shellquote= shellxquote=
     -- ]]
-    vim.keymap.set("c", "<S-CR>", function()
-      require("noice").redirect(function() vim.fn.getcmdline() end)
-    end, { desc = "Redirect Cmdline" })
+   -- vim.keymap.set("c", "<S-CR>", function()
+     -- require("noice").redirect(function() vim.fn.getcmdline() end)
+   -- end, { desc = "Redirect Cmdline" })
     --
     vim.api.nvim_create_user_command("Insp", function() require("noice").redirect "Inspect!" end, { nargs = 0 })
 
