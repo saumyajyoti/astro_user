@@ -4,8 +4,8 @@ local M = {
   -- example of imporing a plugin, comment out to use it or add your own
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
   --
-  -- color 
-  { import = "astrocommunity.colorscheme.catppuccin" },
+  -- color
+  -- { import = "astrocommunity.colorscheme.catppuccin" },
 
   --  Bars
   -- {import = "astrocommunity.bars-and-lines.dropbar-nvim"},
@@ -29,6 +29,9 @@ local M = {
   { import = "astrocommunity.markdown-and-latex.markmap-nvim" },
   --
   { import = "astrocommunity.diagnostics.trouble-nvim" },
+  { import = "astrocommunity.lsp.lsp-lens-nvim" },
+  -- { import = "astrocommunity.lsp.lsp-signature-nvim" },
+
   -- { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   --
   { import = "astrocommunity.git.git-blame-nvim" },
@@ -45,6 +48,7 @@ local M = {
   { import = "astrocommunity.motion.vim-matchup" },
   { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.motion.leap-nvim" },
+  { import = "astrocommunity.motion.tabout-nvim" },
   -- { import = "astrocommunity.motion.mini-move" },
   --
   -- Packs
@@ -54,6 +58,9 @@ local M = {
   { import = "astrocommunity.pack.toml" },
   { import = "astrocommunity.pack.yaml" },
   { import = "astrocommunity.pack.ps1" },
+  -- { import = "astrocommunity.pack.cpp" },
+  { import = "astrocommunity.pack.lua" },
+  -- { import = "astrocommunity.pack.python" },
   --
   -- editing
   --
@@ -71,13 +78,14 @@ local M = {
   -- { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
   { import = "astrocommunity.color.headlines-nvim" },
   { import = "astrocommunity.search.sad-nvim" },
-  { import = "astrocommunity.scrolling.cinnamon-nvim",                     enabled = false },
+  { import = "astrocommunity.scrolling.cinnamon-nvim", enabled = false },
   -- { import = "astrocommunity.color.vim-highlighter" },
   -- { import = "astrocommunity.split-and-window.edgy-nvim" },
   -- { import = "astrocommunity.syntax.hlargs-nvim" },
 
-  { import = "astrocommunity.utility.noice-nvim"},
-  {import = "astrocommunity.utility.telescope-live-grep-args-nvim"},
+  { import = "astrocommunity.utility.noice-nvim" },
+  { import = "astrocommunity.utility.telescope-live-grep-args-nvim" },
+  { import = "astrocommunity.completion.cmp-cmdline" },
 }
 
 return M

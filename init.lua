@@ -59,7 +59,7 @@ return {
     formatting = {
       -- control auto formatting on save
       format_on_save = {
-        enabled = true,     -- enable or disable format on save globally
+        enabled = true, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
           -- "go",
           -- "lua",
@@ -72,7 +72,7 @@ return {
         -- disable lua_ls formatting capability if you want to use StyLua to format your lua code
         -- "lua_ls",
       },
-      timeout_ms = 1000,        -- default format timeout
+      timeout_ms = 1000, -- default format timeout
       filter = function(client) -- fully override the default formatting function
         if client.name == "lua_ls" then return true end
         return true
@@ -126,9 +126,9 @@ return {
     -- let &shellpipe = '2>&1 | Out-File -Encoding UTF8 %s; exit $LastExitCode'
     -- set shellquote= shellxquote=
     -- ]]
-   -- vim.keymap.set("c", "<S-CR>", function()
-     -- require("noice").redirect(function() vim.fn.getcmdline() end)
-   -- end, { desc = "Redirect Cmdline" })
+    -- vim.keymap.set("c", "<S-CR>", function()
+    -- require("noice").redirect(function() vim.fn.getcmdline() end)
+    -- end, { desc = "Redirect Cmdline" })
     --
     vim.api.nvim_create_user_command("Insp", function() require("noice").redirect "Inspect!" end, { nargs = 0 })
 
