@@ -46,17 +46,20 @@ return {
   },
   -- {
   --   "lukas-reineke/indent-blankline.nvim",
-  --   -- enabled = false,
+  --   event = "User AstroFile",
   --   opts = {
-  --     space_char_blankline = " ",
-  --     -- char_highlight_list = {
-  --     --   "IndentBlanklineIndent1",
-  --     --   "IndentBlanklineIndent2",
-  --     --   "IndentBlanklineIndent3",
-  --     --   "IndentBlanklineIndent4",
-  --     --   "IndentBlanklineIndent5",
-  --     --   "IndentBlanklineIndent6",
-  --     -- },
+  --     indent = {
+  --       char = "│",
+  --     },
+  --     scope = {
+  --       enabled = false,
+  --     },
+  --     exclude = {
+  --       filetypes = { "help", "alpha", "dashboard", "Trouble", "lazy", "neo-tree" },
+  --     },
+  --     whitespace = {
+  --       remove_blankline_trail = true,
+  --     },
   --   },
   -- },
 
@@ -104,10 +107,17 @@ return {
         { filter = { event = "msg_show", find = "^%d+ fewer lines$" }, opts = { skip = true } }, -- skip delete notifications
         { filter = { event = "msg_show", find = "^%d+ lines yanked" }, opts = { skip = true } }, -- skip yank notifications
         { filter = { event = "msg_show", find = "deprecated" }, opts = { skip = true } }, -- skip nvim deperecated notifications
+        {
+          filter = {
+            event = "notify",
+            find = "No information available",
+          },
+          opts = { skip = true },
+        }, -- skip hoverdoc no info msgs
       },
       presets = {
         long_message_to_split = true,
-        command_palette = false,
+        command_palette = true,
         bottom_search = true, -- use a classic bottom cmdline for search
         lsp_doc_border = true,
         inc_rename = true,

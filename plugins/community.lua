@@ -8,7 +8,7 @@ local M = {
   -- {import = "astrocommunity.bars-and-lines.dropbar-nvim"},
   -- { import = "astrocommunity.bars-and-lines.bufferline-nvim" },
   { import = "astrocommunity.bars-and-lines.heirline-vscode-winbar" },
-  { import = "astrocommunity.bars-and-lines.heirline-mode-text-statusline" },
+  -- { import = "astrocommunity.bars-and-lines.heirline-mode-text-statusline" },
   --
   -- Files
   --
@@ -26,6 +26,7 @@ local M = {
   { import = "astrocommunity.markdown-and-latex.markmap-nvim" },
   --
   { import = "astrocommunity.diagnostics.trouble-nvim" },
+  -- { import = "astrocommunity.lsp.lsp-lens-nvim" },
   -- { import = "astrocommunity.diagnostics.lsp_lines-nvim" },
   --
   { import = "astrocommunity.git.git-blame-nvim" },
@@ -34,14 +35,17 @@ local M = {
   --
   -- indent
   --
-  -- { import = "astrocommunity.indent.indent-blankline-nvim" },
-  -- { import = "astrocommunity.indent.mini-indentscope" },
+  { import = "astrocommunity.indent.indent-blankline-nvim" },
+  { import = "astrocommunity.indent.mini-indentscope" },
   --
   -- Motion
   --
   { import = "astrocommunity.motion.vim-matchup" },
-  { import = "astrocommunity.motion.harpoon" },
+  -- { import = "astrocommunity.motion.harpoon" },
   { import = "astrocommunity.motion.leap-nvim" },
+  { import = "astrocommunity.motion.portal-nvim" },
+  { import = "astrocommunity.motion.grapple-nvim" },
+  { import = "astrocommunity.motion.flash-nvim" },
   -- { import = "astrocommunity.motion.mini-move" },
   --
   -- Packs
@@ -65,13 +69,19 @@ local M = {
   -- { import = "astrocommunity.editing-support.cutlass-nvim" },
   --
   -- { import = "astrocommunity.syntax.vim-cool" },
-  -- { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
+  { import = "astrocommunity.lsp.lsp-inlayhints-nvim" },
   { import = "astrocommunity.color.headlines-nvim" },
   { import = "astrocommunity.search.sad-nvim" },
-  { import = "astrocommunity.scrolling.cinnamon-nvim",                     enabled = false },
+  { import = "astrocommunity.search.nvim-hlslens" },
+
+  -- { import = "astrocommunity.scrolling.nvim-scrollbar" },
+  -- { import = "astrocommunity.scrolling.cinnamon-nvim", enabled = true },
+  { import = "astrocommunity.scrolling.neoscroll-nvim" },
+  -- { import = "astrocommunity.scrolling.mini-animate" },
+  { import = "astrocommunity.fuzzy-finder.telescope-zoxide" },
   -- { import = "astrocommunity.color.vim-highlighter" },
   -- { import = "astrocommunity.split-and-window.edgy-nvim" },
-  -- { import = "astrocommunity.syntax.hlargs-nvim" }
+  { import = "astrocommunity.syntax.hlargs-nvim" },
 }
 
 return M

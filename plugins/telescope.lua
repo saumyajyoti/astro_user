@@ -2,16 +2,24 @@ return {
   {
     "nvim-telescope/telescope-fzf-native.nvim",
     enabled = false,
-    build =
-    "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
+    build = "cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build",
   },
   {
     "nvim-telescope/telescope.nvim",
     dependencies = {
+      "nvim-lua/popup.nvim",
       "folke/trouble.nvim",
       "nvim-lua/plenary.nvim",
       "debugloop/telescope-undo.nvim",
       "nvim-telescope/telescope-file-browser.nvim",
+      "jvgrootveld/telescope-zoxide",
+    },
+    keys = {
+      {
+        "<leader>fz",
+        "<cmd>Telescope zoxide list<CR>",
+        desc = "Find directories",
+      },
     },
     opts = function(_, opts)
       local trouble = require "trouble.providers.telescope"
@@ -46,13 +54,14 @@ return {
       })
     end,
     config = function(...)
-      require "plugins.configs.telescope" (...)
+      require "plugins.configs.telescope"(...)
       local telescope = require "telescope"
       -- telescope.load_extension "fzy_native"
       -- telescope.load_extension "live_grep_args"
       -- telescope.load_extension "bibtex"
       telescope.load_extension "file_browser"
       telescope.load_extension "undo"
+      telescope.load_extension "zoxide"
       -- telescope.load_extension "projects"
     end,
     -- highlights = {
@@ -85,6 +94,4 @@ return {
     --   end,
     -- },
   },
-
-
 }
