@@ -27,9 +27,9 @@ return {
     icons_enabled = true,            -- disable icons in the UI (disable if no nerd font is available, requires :PackerSync after changing)
     ui_notifications_enabled = true, -- disable notifications when toggling UI elements
     -- loaded_matchit = 1,              -- not needed when matchup in installed
-    gitblame_highlight_group = "MasonMutedBlock",
-    gitblame_message_template = "  <summary>  <author>  󱛡 <date>",
-    gitblame_enabled = 0,
+    -- gitblame_highlight_group = "MasonMutedBlock",
+    -- gitblame_message_template = "  <summary>  <author>  󱛡 <date>",
+    -- gitblame_enabled = 0,
   },
 }
 -- If you need more control, you can use the function()...end notation

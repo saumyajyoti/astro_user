@@ -11,4 +11,10 @@ return {
     end,
   },
   { "tpope/vim-fugitive", event = "VeryLazy" },
+  {
+    "lewis6991/gitsigns.nvim",
+    opts = function(_, opts)
+      opts.current_line_blame_formatter = "  <summary>  <author>  󱛡 <author_time:%Y-%m-%d>"
+    end,
+  },
 }

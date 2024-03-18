@@ -89,7 +89,7 @@ return {
     cond = not vim.g.neovide,
     dependencies = { "MunifTanjim/nui.nvim" },
     opts = {
-      cmdline = { view = "cmdline" },
+      cmdline = { view = "cmdline_popup" },
       messages = { view_search = false },
       lsp = {
         override = {
