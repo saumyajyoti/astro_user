@@ -1,5 +1,11 @@
 # AstroNvim User Configuration Example
 
+Currently I am using https://github.com/saumyajyoti/AstroNvim4
+
+This repo' is archived. 
+
+---
+
 My user configuration for [AstroNvim](https://github.com/AstroNvim/AstroNvim)
 
 ## 🛠️ Installation
